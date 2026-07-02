@@ -1,78 +1,106 @@
-# Herança Tática
+# Heranca Tatica
 
-Análise do DNA tático histórico das seleções da Copa do Mundo.
+**O Brasil de 2022 joga mais parecido com o de 1970 ou com o de 2018?**
 
-## O que faz
+Este projeto responde essa pergunta transformando cada Copa do Mundo em um "DNA tatico" - um vetor numerico que captura *como* um time joga, nao *quanto* ele ganha.
 
-Transforma cada jogo de Copa em um vetor numérico que captura o estilo de jogo (não o resultado), e usa esses vetores para comparar edições históricas de uma seleção.
+## A Ideia
 
-Exemplo: "O Brasil de 2022 joga mais parecido com o de 1974 ou com o de 2018?"
+Resultados mentem. Um 1x0 sofrido pode esconder uma atuacao dominante. Um 4x0 pode vir de contra-ataques sem posse.
 
-## Stack
+Heranca Tatica ignora placares e olha para o estilo: pressao alta ou bloco baixo? Passes curtos ou longos? Jogo pelas pontas ou pelo meio? Transicoes rapidas ou posse paciente?
 
-- **Backend**: Python 3.11 + FastAPI
-- **Frontend**: React 18 + Vite + Tailwind CSS
-- **Dados**: StatsBomb Open Data (via statsbombpy)
-- **Similaridade**: scikit-learn (cosine similarity)
+Com isso, conseguimos comparar selecoes atraves das decadas e descobrir quais edicoes de um mesmo pais jogavam de forma similar - e quais eram completamente diferentes.
 
-## Features Táticas Extraídas
+## O Que Voce Pode Fazer
 
-1. **Altura da Linha Defensiva** - Posição média dos zagueiros
-2. **PPDA** - Passes permitidos por ação defensiva (pressão)
-3. **% Passes Curtos** - Passes com menos de 15m
-4. **% Passes Longos** - Passes com mais de 30m
-5. **Largura de Ataque** - Dispersão lateral no terço final
-6. **Velocidade de Transição** - Progressão em 10s após recuperação
-7. **Cruzamentos vs Central** - Proporção de jogo pelas pontas
-8. **Taxa de Reação à Perda** - Counterpressing em 5 segundos
+**Comparar Edicoes de Uma Selecao**
+- Selecione Brasil e veja como cada Copa (de 1958 a 2022) se compara com a mais recente
+- Descubra que o Brasil de 1970 (86% similar) joga mais parecido com 2022 do que o Brasil de 2018 (82%)
 
-## Copas Disponíveis
+**Comparar Duas Selecoes Quaisquer**
+- Holanda 1974 vs Espanha 2010: 76% similar (tiki-taka antes do tiki-taka?)
+- Argentina 1986 vs Argentina 2022: quao diferente era o time de Maradona?
 
-1958, 1962, 1970, 1974, 1986, 1990, 2018, 2022
+**Ver Historico Completo**
+- Todas as Copas de uma selecao com estatisticas, titulos e nivel de dados disponiveis
+
+## Niveis de Confianca
+
+Nem todos os dados sao iguais:
+
+| Nivel | Features | Fonte | Copas |
+|-------|----------|-------|-------|
+| Alto | 12 features taticas | StatsBomb | 1958, 1962, 1970, 1974, 1986, 1990, 2018, 2022 |
+| Medio | 4 features basicas | Dados historicos | 1966, 1978, 1982, 1994, 1998, 2002, 2006, 2010, 2014 |
+
+Comparacoes entre Copas com dados diferentes usam apenas as features em comum. A interface mostra claramente o nivel de confianca de cada comparacao.
+
+## Features Taticas
+
+**Extraidas do StatsBomb (12 features):**
+- Altura da Linha Defensiva
+- PPDA (Pressao)
+- % Passes Curtos / Longos
+- Largura de Ataque
+- Velocidade de Transicao
+- Cruzamentos vs Central
+- Taxa de Reacao a Perda (Counterpressing)
+- Posse de Bola
+- Chutes a Gol
+- Precisao de Passes
+- xG (Expected Goals)
+
+## Stack Tecnica
+
+```
+Backend:  Python 3.11 + FastAPI
+Frontend: React 18 + Vite + Tailwind CSS
+Dados:    StatsBomb Open Data + Dados historicos compilados
+Calculo:  Similaridade baseada em diferenca percentual normalizada
+```
 
 ## Como Rodar
 
-### Backend
-
 ```bash
+# Backend
 cd backend
 pip install -r requirements.txt
+python ingest.py      # Baixa dados StatsBomb
+python features.py    # Extrai features taticas
+python main.py        # Roda API na porta 8080
 
-# Primeira vez: baixar e processar dados
-python ingest.py
-python features.py
-
-# Rodar API
-python main.py
-```
-
-### Frontend
-
-```bash
+# Frontend
 cd frontend
 npm install
-npm run dev
+npm run dev           # Roda em localhost:5173
 ```
 
-Acesse http://localhost:5173
+## API
 
-## API Endpoints
+```
+GET /api/teams              Lista selecoes disponiveis
+GET /api/compare?team=X     Compara todas as edicoes de uma selecao
+GET /api/compare-cross      Compara duas selecoes/anos quaisquer
+GET /api/teams-years        Lista todos os times/anos disponiveis
+GET /api/history?team=X     Historico completo de uma selecao
+```
 
-- `GET /api/teams` - Lista todas as seleções
-- `GET /api/compare?team=Brazil` - Compara edições de uma seleção
-- `GET /api/similar?team=Brazil&season=2022` - Encontra times similares
-- `GET /api/features` - Descrição das features táticas
+## Alguns Resultados Interessantes
 
-## Exemplos de Resultados
+**Brasil 2022 vs edicoes anteriores:**
+| Copa | Similaridade | Confianca |
+|------|--------------|-----------|
+| 1970 | 86% | Alta |
+| 1982 | 85% | Media |
+| 2018 | 82% | Alta |
+| 1962 | 75% | Alta |
 
-### Brasil 2022 vs edições anteriores:
-- 1974: 46% similar (maior)
-- 1970: 34% similar
-- 2018: 7% similar
-- 1990: -30% (diferente)
-- 1962: -58% (muito diferente)
+**Times mais parecidos com Brasil 2022:**
+1. Argentina 2022 (88%)
+2. Franca 2022 (84%)
+3. Brasil 1970 (86%)
 
-### Times mais similares ao Brasil 2022:
-1. Argentina 2022 (90%)
-2. Brasil 1974 (82%)
-3. Portugal 2022 (73%)
+---
+
+*Dados taticos: StatsBomb Open Data. Dados historicos: FIFA/registros oficiais.*
