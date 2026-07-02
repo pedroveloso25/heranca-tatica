@@ -4,6 +4,7 @@ import SimilarityBar from './components/SimilarityBar'
 import TacticCard from './components/TacticCard'
 import HistoryCard from './components/HistoryCard'
 import CrossCompare from './components/CrossCompare'
+import { api } from './api'
 
 // Icone de trofeu
 const TrophyIcon = () => (
@@ -24,13 +25,12 @@ function App() {
 
   // Carregar lista de times
   useEffect(() => {
-    fetch('/api/teams')
-      .then(res => res.json())
+    api.getTeams()
       .then(data => setTeams(data.teams))
       .catch(err => setError('Erro ao carregar times'))
   }, [])
 
-  // Carregar comparação e histórico quando selecionar time
+  // Carregar comparacao e historico quando selecionar time
   useEffect(() => {
     if (!selectedTeam) return
 
@@ -38,19 +38,10 @@ function App() {
     setError(null)
     setActiveTab('tatica')
 
-    // Carregar comparação tática
-    const comparePromise = fetch(`/api/compare?team=${encodeURIComponent(selectedTeam)}`)
-      .then(res => {
-        if (!res.ok) throw new Error('Time não encontrado')
-        return res.json()
-      })
-
-    // Carregar historico completo
-    const historyPromise = fetch(`/api/history?team=${encodeURIComponent(selectedTeam)}`)
-      .then(res => res.ok ? res.json() : null)
-      .catch(() => null)
-
-    Promise.all([comparePromise, historyPromise])
+    Promise.all([
+      api.getCompare(selectedTeam),
+      api.getHistory(selectedTeam).catch(() => null)
+    ])
       .then(([compData, histData]) => {
         setComparison(compData)
         setHistory(histData)

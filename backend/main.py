@@ -32,10 +32,15 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Configurar CORS para o frontend
+# Configurar CORS para o frontend (local e producao)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://heranca-tatica.vercel.app",
+        "https://*.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

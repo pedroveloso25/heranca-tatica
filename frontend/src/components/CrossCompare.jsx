@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { api } from '../api'
 
 function CrossCompare() {
   const [teamsData, setTeamsData] = useState(null)
@@ -10,10 +11,9 @@ function CrossCompare() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  // Carregar lista de times/anos disponíveis
+  // Carregar lista de times/anos disponiveis
   useEffect(() => {
-    fetch('/api/teams-years')
-      .then(res => res.json())
+    api.getTeamsYears()
       .then(data => setTeamsData(data))
       .catch(err => console.error('Erro ao carregar times:', err))
   }, [])
@@ -29,16 +29,7 @@ function CrossCompare() {
     setResult(null)
 
     try {
-      const response = await fetch(
-        `/api/compare-cross?team1=${encodeURIComponent(team1)}&year1=${year1}&team2=${encodeURIComponent(team2)}&year2=${year2}`
-      )
-
-      if (!response.ok) {
-        const err = await response.json()
-        throw new Error(err.detail || 'Erro na comparação')
-      }
-
-      const data = await response.json()
+      const data = await api.compareCross(team1, year1, team2, year2)
       setResult(data)
     } catch (err) {
       setError(err.message)
