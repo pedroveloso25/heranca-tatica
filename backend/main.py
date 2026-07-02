@@ -39,8 +39,10 @@ app.add_middleware(
         "http://localhost:5173",
         "http://localhost:3000",
         "https://copa-heranca-tatica.vercel.app",
-        "https://*.vercel.app"
+        "https://*.vercel.app",
         "https://copa-heranca-tatica-git-main-pedroveloso25s-projects.vercel.app/",
+        "https://copa-heranca-tatica.vercel.app/",
+        "https://copa-heranca-tatica-5r5emq98r-pedroveloso25s-projects.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
