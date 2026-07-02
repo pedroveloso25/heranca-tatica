@@ -15,8 +15,13 @@ from similarity import (
     get_all_teams,
     get_team_history,
     compare_team_editions,
+    compare_all_team_editions,
     find_similar_teams,
+    compare_cross_teams,
+    get_available_teams_years,
     FEATURE_COLS,
+    ALL_FEATURES,
+    FEATURE_DISPLAY_NAMES,
 )
 from ingest_supplement import load_supplement_data, STATSBOMB_COVERAGE
 
@@ -160,39 +165,35 @@ def get_team(team: str) -> dict[str, Any]:
 @app.get("/api/compare")
 def compare(
     team: str = Query(..., description="Nome da seleção"),
-    reference: str | None = Query(None, description="Edição de referência (ex: 2022)")
+    reference: int | None = Query(None, description="Ano de referência (ex: 2022)")
 ) -> dict[str, Any]:
     """
-    Compara edições de uma seleção.
-    Retorna similaridades ordenadas com a edição de referência (ou mais recente).
+    Compara TODAS as edições de uma seleção usando compare_partial.
+    Inclui edições StatsBomb e históricas, com nível de confiança.
+
+    Cada comparação retorna:
+    - year, similarity, confidence, features_used, features_missing, source
+
+    Copas com confidence "insufficient" (0 features) são excluídas.
     """
     try:
-        df = load_team_tournament_features()
-        history = get_team_history(team)
+        result = compare_all_team_editions(team, reference)
 
-        if not history["editions"]:
+        if result["reference"] is None:
             raise HTTPException(status_code=404, detail=f"Seleção '{team}' não encontrada.")
-
-        reference_season = reference or history["reference_season"]
-
-        comparisons = compare_team_editions(df, team, reference_season)
-
-        # Encontrar features da referência
-        ref_edition = next(
-            (e for e in history["editions"] if e["season"] == reference_season),
-            None
-        )
 
         return {
             "team": team,
             "flag_url": get_flag_url(team),
             "reference": {
-                "season": reference_season,
-                "features": ref_edition["features"] if ref_edition else {},
-                "n_matches": ref_edition["n_matches"] if ref_edition else 0,
+                "year": result["reference"]["year"],
+                "season": str(result["reference"]["year"]),  # compatibilidade
+                "source": result["reference"]["source"],
+                "features": result["reference"]["features"],
+                "n_matches": result["reference"]["n_matches"],
             },
-            "comparisons": comparisons,
-            "feature_names": FEATURE_COLS,
+            "comparisons": result["comparisons"],
+            "feature_names": ALL_FEATURES,
         }
     except FileNotFoundError:
         raise HTTPException(status_code=503, detail="Dados ainda não processados.")
@@ -286,6 +287,77 @@ def get_features() -> dict[str, Any]:
             },
         ]
     }
+
+
+@app.get("/api/compare-cross")
+def compare_cross(
+    team1: str = Query(..., description="Nome da primeira seleção"),
+    year1: int = Query(..., description="Ano da Copa da primeira seleção"),
+    team2: str = Query(..., description="Nome da segunda seleção"),
+    year2: int = Query(..., description="Ano da Copa da segunda seleção")
+) -> dict[str, Any]:
+    """
+    Compara duas seleções de quaisquer Copas.
+
+    Usa apenas features disponíveis em ambas as fontes de dados.
+    Retorna similaridade, confiança e comparação feature a feature.
+
+    Níveis de confiança:
+    - high: >= 6 features em comum (ambos StatsBomb)
+    - medium: 3-5 features em comum
+    - low: < 3 features em comum
+    """
+    try:
+        result = compare_cross_teams(team1, year1, team2, year2)
+
+        # Adicionar flags
+        result["team1"]["flag_url"] = get_flag_url(team1)
+        result["team2"]["flag_url"] = get_flag_url(team2)
+
+        return result
+
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erro ao comparar: {str(e)}")
+
+
+@app.get("/api/teams-years")
+def list_teams_years() -> dict[str, Any]:
+    """
+    Lista todos os times/anos disponíveis de todas as fontes.
+    Útil para popular dropdowns de comparação.
+    """
+    try:
+        teams_years = get_available_teams_years()
+
+        # Agrupar por time
+        by_team = {}
+        for item in teams_years:
+            team = item["team"]
+            if team not in by_team:
+                by_team[team] = {
+                    "name": team,
+                    "flag_url": get_flag_url(team),
+                    "years": []
+                }
+            by_team[team]["years"].append({
+                "year": item["year"],
+                "source": item["source"]
+            })
+
+        # Ordenar anos de cada time (mais recente primeiro)
+        for team in by_team:
+            by_team[team]["years"].sort(key=lambda x: x["year"], reverse=True)
+
+        return {
+            "teams": list(by_team.values()),
+            "total_teams": len(by_team),
+            "total_entries": len(teams_years)
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erro: {str(e)}")
 
 
 @app.get("/api/history")

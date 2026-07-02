@@ -295,14 +295,83 @@ def extract_counterpressing_rate(events: pd.DataFrame, team: str) -> float:
     return float(counterpresses / len(turnovers))
 
 
-def extract_match_features(events: pd.DataFrame, team: str, opponent: str) -> dict[str, float]:
+# =============================================================================
+# STATS BÁSICAS (para comparação com dados históricos)
+# =============================================================================
+
+def extract_possession(events: pd.DataFrame, team: str, opponent: str) -> float:
     """
-    Extrai todas as features táticas de um jogo para um time.
-    Retorna dicionário com as 7 features principais.
+    Calcula posse de bola aproximada baseada em passes completados.
+    Retorna percentual de posse (0-100).
+    """
+    team_passes = events[(events["team"] == team) & (events["type"] == "Pass")]
+    opponent_passes = events[(events["team"] == opponent) & (events["type"] == "Pass")]
+
+    total = len(team_passes) + len(opponent_passes)
+    if total == 0:
+        return 50.0
+
+    return float((len(team_passes) / total) * 100)
+
+
+def extract_shots_on_target(events: pd.DataFrame, team: str) -> float:
+    """
+    Conta chutes a gol (on target).
+    """
+    shots = events[(events["team"] == team) & (events["type"] == "Shot")]
+
+    if shots.empty:
+        return 0.0
+
+    # Chutes on target: goal, saved, post (excluindo blocked, off target, wayward)
+    on_target_outcomes = ["Goal", "Saved", "Saved to Post"]
+    on_target = shots[shots.get("shot_outcome", "").isin(on_target_outcomes)]
+
+    return float(len(on_target))
+
+
+def extract_pass_accuracy(events: pd.DataFrame, team: str) -> float:
+    """
+    Calcula precisão de passes (passes completos / total de passes).
+    Retorna percentual (0-100).
+    """
+    passes = events[(events["team"] == team) & (events["type"] == "Pass")]
+
+    if passes.empty:
+        return 0.0
+
+    # Passes incompletos têm pass_outcome preenchido
+    completed = passes[passes.get("pass_outcome", pd.NA).isna()]
+
+    return float((len(completed) / len(passes)) * 100)
+
+
+def extract_xg(events: pd.DataFrame, team: str) -> float | None:
+    """
+    Extrai xG (Expected Goals) total do time.
+    Retorna None se dados não disponíveis.
+    """
+    shots = events[(events["team"] == team) & (events["type"] == "Shot")]
+
+    if shots.empty or "shot_statsbomb_xg" not in shots.columns:
+        return None
+
+    xg_values = shots["shot_statsbomb_xg"].dropna()
+    if xg_values.empty:
+        return None
+
+    return float(xg_values.sum())
+
+
+def extract_match_features(events: pd.DataFrame, team: str, opponent: str) -> dict[str, Any]:
+    """
+    Extrai todas as features de um jogo para um time.
+    Inclui features táticas avançadas E stats básicas para comparação histórica.
     """
     short_pass_pct, long_pass_pct = extract_pass_length_profile(events, team)
 
-    return {
+    features = {
+        # Features táticas avançadas (StatsBomb)
         "defensive_line_height": extract_defensive_line_height(events, team),
         "ppda": extract_ppda(events, team, opponent),
         "short_pass_pct": short_pass_pct,
@@ -311,7 +380,14 @@ def extract_match_features(events: pd.DataFrame, team: str, opponent: str) -> di
         "transition_speed": extract_transition_speed(events, team),
         "cross_vs_central": extract_cross_vs_central_ratio(events, team),
         "counterpress_rate": extract_counterpressing_rate(events, team),
+        # Stats básicas (compatíveis com dados históricos)
+        "posse": extract_possession(events, team, opponent),
+        "chutes_gol": extract_shots_on_target(events, team),
+        "precisao_passes": extract_pass_accuracy(events, team),
+        "xg": extract_xg(events, team),
     }
+
+    return features
 
 
 def extract_features_from_match_file(match_id: int, match_info: dict[str, Any]) -> list[dict[str, Any]]:
@@ -383,13 +459,24 @@ def aggregate_team_features_by_tournament(features_df: pd.DataFrame) -> pd.DataF
     """
     Agrega features por time por Copa do Mundo.
     Calcula média das features de todos os jogos de uma seleção em uma edição.
+    Inclui features táticas avançadas E stats básicas.
     """
-    feature_cols = [
+    # Features táticas avançadas
+    tactical_cols = [
         "defensive_line_height", "ppda", "short_pass_pct", "long_pass_pct",
         "attack_width", "transition_speed", "cross_vs_central", "counterpress_rate"
     ]
 
-    aggregated = features_df.groupby(["team", "season"])[feature_cols].mean().reset_index()
+    # Stats básicas (compatíveis com dados históricos)
+    basic_cols = ["posse", "chutes_gol", "precisao_passes", "xg"]
+
+    # Usar apenas colunas que existem no DataFrame
+    all_feature_cols = []
+    for col in tactical_cols + basic_cols:
+        if col in features_df.columns:
+            all_feature_cols.append(col)
+
+    aggregated = features_df.groupby(["team", "season"])[all_feature_cols].mean().reset_index()
 
     # Adicionar contagem de jogos
     match_counts = features_df.groupby(["team", "season"]).size().reset_index(name="n_matches")
