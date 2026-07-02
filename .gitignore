@@ -1,5 +1,4 @@
-# Claude
-.claude/
+
 
 # Python
 __pycache__/
@@ -39,3 +38,6 @@ backend/data/*.json
 # Build
 build/
 *.egg
+
+# Claude
+.claude/
