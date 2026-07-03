@@ -1,0 +1,2253 @@
+{
+  "generated_at": "2026-07-01T12:48:18.327823",
+  "source": "historical_records",
+  "teams": {
+    "Brazil": {
+      "copas": [
+        {
+          "ano": 1930,
+          "season": "1930",
+          "jogos": 2,
+          "gols_marcados": 5,
+          "gols_sofridos": 2,
+          "saldo": 3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 1,
+          "gols_marcados": 1,
+          "gols_sofridos": 3,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1938,
+          "season": "1938",
+          "jogos": 5,
+          "gols_marcados": 14,
+          "gols_sofridos": 11,
+          "saldo": 3,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1950,
+          "season": "1950",
+          "jogos": 6,
+          "gols_marcados": 22,
+          "gols_sofridos": 6,
+          "saldo": 16,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 3,
+          "gols_marcados": 8,
+          "gols_sofridos": 5,
+          "saldo": 3,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1958,
+          "season": "1958",
+          "jogos": 6,
+          "gols_marcados": 16,
+          "gols_sofridos": 4,
+          "saldo": 12,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "parcial",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 6,
+          "gols_marcados": 14,
+          "gols_sofridos": 5,
+          "saldo": 9,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "parcial",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 6,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1970,
+          "season": "1970",
+          "jogos": 6,
+          "gols_marcados": 19,
+          "gols_sofridos": 7,
+          "saldo": 12,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1974,
+          "season": "1974",
+          "jogos": 7,
+          "gols_marcados": 6,
+          "gols_sofridos": 4,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "parcial",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 7,
+          "gols_marcados": 10,
+          "gols_sofridos": 3,
+          "saldo": 7,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 5,
+          "gols_marcados": 15,
+          "gols_sofridos": 6,
+          "saldo": 9,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 1,
+          "saldo": 9,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "parcial",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 2,
+          "saldo": 2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "parcial",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 7,
+          "gols_marcados": 11,
+          "gols_sofridos": 3,
+          "saldo": 8,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 7,
+          "gols_marcados": 14,
+          "gols_sofridos": 10,
+          "saldo": 4,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 7,
+          "gols_marcados": 18,
+          "gols_sofridos": 4,
+          "saldo": 14,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 2,
+          "saldo": 8,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 5,
+          "gols_marcados": 9,
+          "gols_sofridos": 4,
+          "saldo": 5,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 7,
+          "gols_marcados": 11,
+          "gols_sofridos": 14,
+          "saldo": -3,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 5,
+          "gols_marcados": 8,
+          "gols_sofridos": 3,
+          "saldo": 5,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 5,
+          "gols_marcados": 8,
+          "gols_sofridos": 3,
+          "saldo": 5,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 5,
+      "total_jogos": 114,
+      "total_gols": 237
+    },
+    "Argentina": {
+      "copas": [
+        {
+          "ano": 1930,
+          "season": "1930",
+          "jogos": 5,
+          "gols_marcados": 18,
+          "gols_sofridos": 9,
+          "saldo": 9,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 1,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1958,
+          "season": "1958",
+          "jogos": 3,
+          "gols_marcados": 5,
+          "gols_sofridos": 10,
+          "saldo": -5,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 2,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1974,
+          "season": "1974",
+          "jogos": 6,
+          "gols_marcados": 9,
+          "gols_sofridos": 6,
+          "saldo": 3,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 7,
+          "gols_marcados": 15,
+          "gols_sofridos": 4,
+          "saldo": 11,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 5,
+          "gols_marcados": 8,
+          "gols_sofridos": 7,
+          "saldo": 1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 7,
+          "gols_marcados": 14,
+          "gols_sofridos": 5,
+          "saldo": 9,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 7,
+          "gols_marcados": 5,
+          "gols_sofridos": 4,
+          "saldo": 1,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 4,
+          "gols_marcados": 8,
+          "gols_sofridos": 3,
+          "saldo": 5,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 4,
+          "saldo": 6,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 2,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 5,
+          "gols_marcados": 11,
+          "gols_sofridos": 3,
+          "saldo": 8,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 6,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 7,
+          "gols_marcados": 8,
+          "gols_sofridos": 4,
+          "saldo": 4,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 4,
+          "gols_marcados": 6,
+          "gols_sofridos": 9,
+          "saldo": -3,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 7,
+          "gols_marcados": 15,
+          "gols_sofridos": 8,
+          "saldo": 7,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 3,
+      "total_jogos": 88,
+      "total_gols": 152
+    },
+    "Germany": {
+      "copas": [
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 4,
+          "gols_marcados": 11,
+          "gols_sofridos": 8,
+          "saldo": 3,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1938,
+          "season": "1938",
+          "jogos": 2,
+          "gols_marcados": 3,
+          "gols_sofridos": 5,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 6,
+          "gols_marcados": 25,
+          "gols_sofridos": 14,
+          "saldo": 11,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1958,
+          "season": "1958",
+          "jogos": 4,
+          "gols_marcados": 12,
+          "gols_sofridos": 7,
+          "saldo": 5,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 2,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 6,
+          "gols_marcados": 15,
+          "gols_sofridos": 6,
+          "saldo": 9,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1970,
+          "season": "1970",
+          "jogos": 6,
+          "gols_marcados": 17,
+          "gols_sofridos": 10,
+          "saldo": 7,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1974,
+          "season": "1974",
+          "jogos": 7,
+          "gols_marcados": 13,
+          "gols_sofridos": 4,
+          "saldo": 9,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 6,
+          "gols_marcados": 10,
+          "gols_sofridos": 5,
+          "saldo": 5,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 7,
+          "gols_marcados": 12,
+          "gols_sofridos": 10,
+          "saldo": 2,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 7,
+          "gols_marcados": 8,
+          "gols_sofridos": 7,
+          "saldo": 1,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 7,
+          "gols_marcados": 15,
+          "gols_sofridos": 5,
+          "saldo": 10,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 5,
+          "gols_marcados": 9,
+          "gols_sofridos": 6,
+          "saldo": 3,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 5,
+          "gols_marcados": 8,
+          "gols_sofridos": 6,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 7,
+          "gols_marcados": 14,
+          "gols_sofridos": 3,
+          "saldo": 11,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 7,
+          "gols_marcados": 14,
+          "gols_sofridos": 6,
+          "saldo": 8,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 7,
+          "gols_marcados": 16,
+          "gols_sofridos": 5,
+          "saldo": 11,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 7,
+          "gols_marcados": 18,
+          "gols_sofridos": 4,
+          "saldo": 14,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 4,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 3,
+          "gols_marcados": 6,
+          "gols_sofridos": 5,
+          "saldo": 1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 4,
+      "total_jogos": 110,
+      "total_gols": 232
+    },
+    "France": {
+      "copas": [
+        {
+          "ano": 1930,
+          "season": "1930",
+          "jogos": 2,
+          "gols_marcados": 4,
+          "gols_sofridos": 3,
+          "saldo": 1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 1,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1938,
+          "season": "1938",
+          "jogos": 2,
+          "gols_marcados": 4,
+          "gols_sofridos": 4,
+          "saldo": 0,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 2,
+          "gols_marcados": 3,
+          "gols_sofridos": 8,
+          "saldo": -5,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1958,
+          "season": "1958",
+          "jogos": 6,
+          "gols_marcados": 23,
+          "gols_sofridos": 15,
+          "saldo": 8,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 5,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 3,
+          "gols_marcados": 5,
+          "gols_sofridos": 5,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 7,
+          "gols_marcados": 16,
+          "gols_sofridos": 12,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 7,
+          "gols_marcados": 12,
+          "gols_sofridos": 6,
+          "saldo": 6,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 7,
+          "gols_marcados": 15,
+          "gols_sofridos": 2,
+          "saldo": 13,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 3,
+          "gols_marcados": 0,
+          "gols_sofridos": 3,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 7,
+          "gols_marcados": 9,
+          "gols_sofridos": 3,
+          "saldo": 6,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 3,
+          "gols_marcados": 1,
+          "gols_sofridos": 4,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 3,
+          "saldo": 7,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 7,
+          "gols_marcados": 14,
+          "gols_sofridos": 6,
+          "saldo": 8,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 7,
+          "gols_marcados": 16,
+          "gols_sofridos": 8,
+          "saldo": 8,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 2,
+      "total_jogos": 72,
+      "total_gols": 136
+    },
+    "Italy": {
+      "copas": [
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 5,
+          "gols_marcados": 12,
+          "gols_sofridos": 3,
+          "saldo": 9,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1938,
+          "season": "1938",
+          "jogos": 4,
+          "gols_marcados": 11,
+          "gols_sofridos": 5,
+          "saldo": 6,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1950,
+          "season": "1950",
+          "jogos": 2,
+          "gols_marcados": 4,
+          "gols_sofridos": 3,
+          "saldo": 1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 2,
+          "gols_marcados": 5,
+          "gols_sofridos": 6,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 3,
+          "gols_marcados": 3,
+          "gols_sofridos": 2,
+          "saldo": 1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 2,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1970,
+          "season": "1970",
+          "jogos": 6,
+          "gols_marcados": 10,
+          "gols_sofridos": 8,
+          "saldo": 2,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1974,
+          "season": "1974",
+          "jogos": 3,
+          "gols_marcados": 5,
+          "gols_sofridos": 4,
+          "saldo": 1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 7,
+          "gols_marcados": 9,
+          "gols_sofridos": 6,
+          "saldo": 3,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 7,
+          "gols_marcados": 12,
+          "gols_sofridos": 6,
+          "saldo": 6,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 4,
+          "gols_marcados": 5,
+          "gols_sofridos": 6,
+          "saldo": -1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 7,
+          "gols_marcados": 10,
+          "gols_sofridos": 2,
+          "saldo": 8,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 7,
+          "gols_marcados": 8,
+          "gols_sofridos": 5,
+          "saldo": 3,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 5,
+          "gols_marcados": 8,
+          "gols_sofridos": 6,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 4,
+          "gols_marcados": 5,
+          "gols_sofridos": 3,
+          "saldo": 2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 7,
+          "gols_marcados": 12,
+          "gols_sofridos": 2,
+          "saldo": 10,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        }
+      ],
+      "titulos": 4,
+      "total_jogos": 82,
+      "total_gols": 127
+    },
+    "England": {
+      "copas": [
+        {
+          "ano": 1950,
+          "season": "1950",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 2,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 3,
+          "gols_marcados": 8,
+          "gols_sofridos": 8,
+          "saldo": 0,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1958,
+          "season": "1958",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 4,
+          "gols_marcados": 5,
+          "gols_sofridos": 6,
+          "saldo": -1,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 6,
+          "gols_marcados": 11,
+          "gols_sofridos": 3,
+          "saldo": 8,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1970,
+          "season": "1970",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 4,
+          "saldo": 0,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 5,
+          "gols_marcados": 6,
+          "gols_sofridos": 1,
+          "saldo": 5,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 5,
+          "gols_marcados": 7,
+          "gols_sofridos": 3,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 7,
+          "gols_marcados": 8,
+          "gols_sofridos": 6,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 4,
+          "gols_marcados": 7,
+          "gols_sofridos": 4,
+          "saldo": 3,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 5,
+          "gols_marcados": 6,
+          "gols_sofridos": 3,
+          "saldo": 3,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 5,
+          "gols_marcados": 6,
+          "gols_sofridos": 2,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 4,
+          "gols_marcados": 3,
+          "gols_sofridos": 5,
+          "saldo": -2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 4,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 7,
+          "gols_marcados": 12,
+          "gols_sofridos": 8,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 5,
+          "gols_marcados": 13,
+          "gols_sofridos": 4,
+          "saldo": 9,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 1,
+      "total_jogos": 74,
+      "total_gols": 104
+    },
+    "Spain": {
+      "copas": [
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 3,
+          "saldo": 1,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1950,
+          "season": "1950",
+          "jogos": 6,
+          "gols_marcados": 10,
+          "gols_sofridos": 12,
+          "saldo": -2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 5,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 5,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 5,
+          "gols_marcados": 11,
+          "gols_sofridos": 4,
+          "saldo": 7,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 4,
+          "gols_marcados": 6,
+          "gols_sofridos": 4,
+          "saldo": 2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 6,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 4,
+          "gols_marcados": 8,
+          "gols_sofridos": 4,
+          "saldo": 4,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 5,
+          "saldo": 5,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 4,
+          "gols_marcados": 9,
+          "gols_sofridos": 4,
+          "saldo": 5,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 7,
+          "gols_marcados": 8,
+          "gols_sofridos": 2,
+          "saldo": 6,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 7,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 4,
+          "gols_marcados": 7,
+          "gols_sofridos": 6,
+          "saldo": 1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 4,
+          "gols_marcados": 9,
+          "gols_sofridos": 3,
+          "saldo": 6,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 1,
+      "total_jogos": 68,
+      "total_gols": 108
+    },
+    "Netherlands": {
+      "copas": [
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 1,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1938,
+          "season": "1938",
+          "jogos": 1,
+          "gols_marcados": 0,
+          "gols_sofridos": 3,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1974,
+          "season": "1974",
+          "jogos": 7,
+          "gols_marcados": 15,
+          "gols_sofridos": 3,
+          "saldo": 12,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 7,
+          "gols_marcados": 15,
+          "gols_sofridos": 7,
+          "saldo": 8,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 4,
+          "gols_marcados": 6,
+          "gols_sofridos": 3,
+          "saldo": 3,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 5,
+          "gols_marcados": 8,
+          "gols_sofridos": 6,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 7,
+          "gols_marcados": 13,
+          "gols_sofridos": 7,
+          "saldo": 6,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 4,
+          "gols_marcados": 3,
+          "gols_sofridos": 3,
+          "saldo": 0,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 7,
+          "gols_marcados": 12,
+          "gols_sofridos": 6,
+          "saldo": 6,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 7,
+          "gols_marcados": 15,
+          "gols_sofridos": 4,
+          "saldo": 11,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 5,
+          "gols_marcados": 10,
+          "gols_sofridos": 5,
+          "saldo": 5,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 0,
+      "total_jogos": 55,
+      "total_gols": 99
+    },
+    "Uruguay": {
+      "copas": [
+        {
+          "ano": 1930,
+          "season": "1930",
+          "jogos": 4,
+          "gols_marcados": 15,
+          "gols_sofridos": 3,
+          "saldo": 12,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1950,
+          "season": "1950",
+          "jogos": 4,
+          "gols_marcados": 15,
+          "gols_sofridos": 5,
+          "saldo": 10,
+          "resultado_final": "campeao",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 4,
+          "gols_marcados": 16,
+          "gols_sofridos": 9,
+          "saldo": 7,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 6,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 4,
+          "gols_marcados": 2,
+          "gols_sofridos": 5,
+          "saldo": -3,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1970,
+          "season": "1970",
+          "jogos": 6,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1974,
+          "season": "1974",
+          "jogos": 3,
+          "gols_marcados": 1,
+          "gols_sofridos": 6,
+          "saldo": -5,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 4,
+          "gols_marcados": 2,
+          "gols_sofridos": 8,
+          "saldo": -6,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 4,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 7,
+          "gols_marcados": 11,
+          "gols_sofridos": 5,
+          "saldo": 6,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 6,
+          "saldo": -2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 5,
+          "gols_marcados": 7,
+          "gols_sofridos": 3,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 4,
+          "gols_marcados": 3,
+          "gols_sofridos": 3,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 2,
+      "total_jogos": 59,
+      "total_gols": 90
+    },
+    "Portugal": {
+      "copas": [
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 6,
+          "gols_marcados": 17,
+          "gols_sofridos": 8,
+          "saldo": 9,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 4,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 3,
+          "gols_marcados": 6,
+          "gols_sofridos": 4,
+          "saldo": 2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 7,
+          "gols_marcados": 7,
+          "gols_sofridos": 5,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 4,
+          "gols_marcados": 7,
+          "gols_sofridos": 1,
+          "saldo": 6,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 7,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 4,
+          "gols_marcados": 6,
+          "gols_sofridos": 6,
+          "saldo": 0,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 5,
+          "gols_marcados": 12,
+          "gols_sofridos": 6,
+          "saldo": 6,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 0,
+      "total_jogos": 35,
+      "total_gols": 61
+    },
+    "Belgium": {
+      "copas": [
+        {
+          "ano": 1930,
+          "season": "1930",
+          "jogos": 2,
+          "gols_marcados": 0,
+          "gols_sofridos": 4,
+          "saldo": -4,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1934,
+          "season": "1934",
+          "jogos": 1,
+          "gols_marcados": 2,
+          "gols_sofridos": 5,
+          "saldo": -3,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1938,
+          "season": "1938",
+          "jogos": 1,
+          "gols_marcados": 1,
+          "gols_sofridos": 3,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 2,
+          "gols_marcados": 5,
+          "gols_sofridos": 5,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1970,
+          "season": "1970",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1982,
+          "season": "1982",
+          "jogos": 5,
+          "gols_marcados": 3,
+          "gols_sofridos": 5,
+          "saldo": -2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 7,
+          "gols_marcados": 12,
+          "gols_sofridos": 8,
+          "saldo": 4,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1990,
+          "season": "1990",
+          "jogos": 4,
+          "gols_marcados": 6,
+          "gols_sofridos": 4,
+          "saldo": 2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 4,
+          "saldo": 0,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 3,
+          "gols_marcados": 3,
+          "gols_sofridos": 3,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 4,
+          "gols_marcados": 6,
+          "gols_sofridos": 7,
+          "saldo": -1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 5,
+          "gols_marcados": 6,
+          "gols_sofridos": 3,
+          "saldo": 3,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 7,
+          "gols_marcados": 16,
+          "gols_sofridos": 6,
+          "saldo": 10,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 3,
+          "gols_marcados": 1,
+          "gols_sofridos": 2,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 0,
+      "total_jogos": 51,
+      "total_gols": 69
+    },
+    "Croatia": {
+      "copas": [
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 7,
+          "gols_marcados": 11,
+          "gols_sofridos": 5,
+          "saldo": 6,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 2,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 3,
+          "gols_marcados": 6,
+          "gols_sofridos": 6,
+          "saldo": 0,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 7,
+          "gols_marcados": 14,
+          "gols_sofridos": 9,
+          "saldo": 5,
+          "resultado_final": "vice",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 7,
+          "gols_marcados": 8,
+          "gols_sofridos": 7,
+          "saldo": 1,
+          "resultado_final": "terceiro",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 0,
+      "total_jogos": 30,
+      "total_gols": 43
+    },
+    "Mexico": {
+      "copas": [
+        {
+          "ano": 1930,
+          "season": "1930",
+          "jogos": 3,
+          "gols_marcados": 4,
+          "gols_sofridos": 13,
+          "saldo": -9,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1950,
+          "season": "1950",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 10,
+          "saldo": -8,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1954,
+          "season": "1954",
+          "jogos": 2,
+          "gols_marcados": 2,
+          "gols_sofridos": 8,
+          "saldo": -6,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1958,
+          "season": "1958",
+          "jogos": 3,
+          "gols_marcados": 1,
+          "gols_sofridos": 8,
+          "saldo": -7,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1962,
+          "season": "1962",
+          "jogos": 3,
+          "gols_marcados": 3,
+          "gols_sofridos": 4,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1966,
+          "season": "1966",
+          "jogos": 3,
+          "gols_marcados": 1,
+          "gols_sofridos": 3,
+          "saldo": -2,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1970,
+          "season": "1970",
+          "jogos": 4,
+          "gols_marcados": 6,
+          "gols_sofridos": 4,
+          "saldo": 2,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 1978,
+          "season": "1978",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 12,
+          "saldo": -10,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1986,
+          "season": "1986",
+          "jogos": 5,
+          "gols_marcados": 6,
+          "gols_sofridos": 5,
+          "saldo": 1,
+          "resultado_final": "quartas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1994,
+          "season": "1994",
+          "jogos": 4,
+          "gols_marcados": 3,
+          "gols_sofridos": 4,
+          "saldo": -1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 1998,
+          "season": "1998",
+          "jogos": 4,
+          "gols_marcados": 8,
+          "gols_sofridos": 6,
+          "saldo": 2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2002,
+          "season": "2002",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 4,
+          "saldo": 0,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2006,
+          "season": "2006",
+          "jogos": 4,
+          "gols_marcados": 5,
+          "gols_sofridos": 5,
+          "saldo": 0,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2010,
+          "season": "2010",
+          "jogos": 4,
+          "gols_marcados": 4,
+          "gols_sofridos": 5,
+          "saldo": -1,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2014,
+          "season": "2014",
+          "jogos": 4,
+          "gols_marcados": 5,
+          "gols_sofridos": 3,
+          "saldo": 2,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "referencia",
+          "fonte_tatica": null
+        },
+        {
+          "ano": 2018,
+          "season": "2018",
+          "jogos": 4,
+          "gols_marcados": 3,
+          "gols_sofridos": 6,
+          "saldo": -3,
+          "resultado_final": "oitavas",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        },
+        {
+          "ano": 2022,
+          "season": "2022",
+          "jogos": 3,
+          "gols_marcados": 2,
+          "gols_sofridos": 3,
+          "saldo": -1,
+          "resultado_final": "fase_grupos",
+          "nivel_confiabilidade": "completo",
+          "fonte_tatica": "statsbomb"
+        }
+      ],
+      "titulos": 0,
+      "total_jogos": 60,
+      "total_gols": 61
+    }
+  }
+}

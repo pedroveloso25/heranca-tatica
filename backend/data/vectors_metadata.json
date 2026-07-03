@@ -1,0 +1,442 @@
+[
+  {
+    "team": "Argentina",
+    "season": 1974,
+    "n_matches": 1
+  },
+  {
+    "team": "Argentina",
+    "season": 1986,
+    "n_matches": 3
+  },
+  {
+    "team": "Argentina",
+    "season": 1990,
+    "n_matches": 1
+  },
+  {
+    "team": "Argentina",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Argentina",
+    "season": 2022,
+    "n_matches": 7
+  },
+  {
+    "team": "Australia",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Australia",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Belgium",
+    "season": 1986,
+    "n_matches": 1
+  },
+  {
+    "team": "Belgium",
+    "season": 2018,
+    "n_matches": 7
+  },
+  {
+    "team": "Belgium",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Brazil",
+    "season": 1958,
+    "n_matches": 2
+  },
+  {
+    "team": "Brazil",
+    "season": 1962,
+    "n_matches": 1
+  },
+  {
+    "team": "Brazil",
+    "season": 1970,
+    "n_matches": 6
+  },
+  {
+    "team": "Brazil",
+    "season": 1974,
+    "n_matches": 1
+  },
+  {
+    "team": "Brazil",
+    "season": 1990,
+    "n_matches": 1
+  },
+  {
+    "team": "Brazil",
+    "season": 2018,
+    "n_matches": 5
+  },
+  {
+    "team": "Brazil",
+    "season": 2022,
+    "n_matches": 5
+  },
+  {
+    "team": "Cameroon",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Canada",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Colombia",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Costa Rica",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Costa Rica",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Croatia",
+    "season": 2018,
+    "n_matches": 7
+  },
+  {
+    "team": "Croatia",
+    "season": 2022,
+    "n_matches": 7
+  },
+  {
+    "team": "Czechoslovakia",
+    "season": 1970,
+    "n_matches": 1
+  },
+  {
+    "team": "Denmark",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Denmark",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Ecuador",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Egypt",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "England",
+    "season": 1970,
+    "n_matches": 1
+  },
+  {
+    "team": "England",
+    "season": 1986,
+    "n_matches": 1
+  },
+  {
+    "team": "England",
+    "season": 2018,
+    "n_matches": 7
+  },
+  {
+    "team": "England",
+    "season": 2022,
+    "n_matches": 5
+  },
+  {
+    "team": "France",
+    "season": 1958,
+    "n_matches": 1
+  },
+  {
+    "team": "France",
+    "season": 2018,
+    "n_matches": 7
+  },
+  {
+    "team": "France",
+    "season": 2022,
+    "n_matches": 7
+  },
+  {
+    "team": "German DR",
+    "season": 1974,
+    "n_matches": 2
+  },
+  {
+    "team": "Germany",
+    "season": 1974,
+    "n_matches": 2
+  },
+  {
+    "team": "Germany",
+    "season": 1986,
+    "n_matches": 1
+  },
+  {
+    "team": "Germany",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Germany",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Ghana",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Iceland",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Iran",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Iran",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Italy",
+    "season": 1970,
+    "n_matches": 1
+  },
+  {
+    "team": "Japan",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Japan",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Mexico",
+    "season": 1962,
+    "n_matches": 1
+  },
+  {
+    "team": "Mexico",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Mexico",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Morocco",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Morocco",
+    "season": 2022,
+    "n_matches": 7
+  },
+  {
+    "team": "Netherlands",
+    "season": 1974,
+    "n_matches": 5
+  },
+  {
+    "team": "Netherlands",
+    "season": 2022,
+    "n_matches": 5
+  },
+  {
+    "team": "Nigeria",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Panama",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Peru",
+    "season": 1970,
+    "n_matches": 1
+  },
+  {
+    "team": "Peru",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Poland",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Poland",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Portugal",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Portugal",
+    "season": 2022,
+    "n_matches": 5
+  },
+  {
+    "team": "Qatar",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Romania",
+    "season": 1970,
+    "n_matches": 1
+  },
+  {
+    "team": "Russia",
+    "season": 2018,
+    "n_matches": 5
+  },
+  {
+    "team": "Saudi Arabia",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Saudi Arabia",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Senegal",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Senegal",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Serbia",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Serbia",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "South Korea",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "South Korea",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Spain",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Spain",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Sweden",
+    "season": 1958,
+    "n_matches": 1
+  },
+  {
+    "team": "Sweden",
+    "season": 1974,
+    "n_matches": 1
+  },
+  {
+    "team": "Sweden",
+    "season": 2018,
+    "n_matches": 5
+  },
+  {
+    "team": "Switzerland",
+    "season": 2018,
+    "n_matches": 4
+  },
+  {
+    "team": "Switzerland",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Tunisia",
+    "season": 2018,
+    "n_matches": 3
+  },
+  {
+    "team": "Tunisia",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "United States",
+    "season": 2022,
+    "n_matches": 4
+  },
+  {
+    "team": "Uruguay",
+    "season": 1970,
+    "n_matches": 1
+  },
+  {
+    "team": "Uruguay",
+    "season": 2018,
+    "n_matches": 5
+  },
+  {
+    "team": "Uruguay",
+    "season": 2022,
+    "n_matches": 3
+  },
+  {
+    "team": "Wales",
+    "season": 2022,
+    "n_matches": 3
+  }
+]

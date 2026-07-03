@@ -31,9 +31,9 @@ dist/
 Thumbs.db
 desktop.ini
 
-# Data files (large)
+# Data files (large) - parquet ignorados, json necessarios para deploy
 backend/data/*.parquet
-backend/data/*.json
+backend/data/events/
 
 # Build
 build/
