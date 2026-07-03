@@ -240,6 +240,7 @@ function App() {
                             totalFeaturesUsed={comp.total_features_used}
                             source={comp.source}
                             nMatches={comp.n_matches}
+                            totalMatches={comp.total_matches}
                           />
                         ))}
                     </div>

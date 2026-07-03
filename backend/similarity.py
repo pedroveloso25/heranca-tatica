@@ -286,6 +286,10 @@ def compare_all_team_editions(team: str, reference_year: int | None = None) -> d
         if result is None:  # "insufficient" confidence
             continue
 
+        # Obter total de jogos da Copa
+        total_matches = get_total_matches_for_team_year(team, year)
+        n_matches = edition_data.get("n_matches", 0)
+
         comparisons.append({
             "year": year,
             "similarity": result["similarity"],
@@ -294,18 +298,24 @@ def compare_all_team_editions(team: str, reference_year: int | None = None) -> d
             "features_missing": result["features_missing"],
             "total_features_used": result["total_features_used"],
             "source": edition_data.get("source", "unknown"),
-            "n_matches": edition_data.get("n_matches", 0),
+            "n_matches": n_matches,
+            "total_matches": total_matches or n_matches,
         })
 
     # Ordenar por similaridade (maior primeiro)
     comparisons.sort(key=lambda x: x["similarity"], reverse=True)
+
+    # Obter total de jogos da referência
+    ref_total_matches = get_total_matches_for_team_year(team, reference_year)
+    ref_n_matches = ref_data.get("n_matches", 0)
 
     return {
         "team": team,
         "reference": {
             "year": reference_year,
             "source": ref_data.get("source", "unknown"),
-            "n_matches": ref_data.get("n_matches", 0),
+            "n_matches": ref_n_matches,
+            "total_matches": ref_total_matches or ref_n_matches,
             # Incluir todas as features disponíveis
             "features": {f: ref_data.get(f) for f in ALL_FEATURES if ref_data.get(f) is not None}
         },
@@ -640,18 +650,26 @@ def compare_cross_teams(
     if result is None:
         raise ValueError(f"Nenhuma feature em comum entre {team1} {year1} e {team2} {year2}")
 
+    # Obter total de jogos para cada time
+    total1 = get_total_matches_for_team_year(team1, year1)
+    total2 = get_total_matches_for_team_year(team2, year2)
+    n1 = data1.get("n_matches", 0)
+    n2 = data2.get("n_matches", 0)
+
     return {
         "team1": {
             "name": team1,
             "year": year1,
             "source": source1,
-            "n_matches": data1.get("n_matches", 0)
+            "n_matches": n1,
+            "total_matches": total1 or n1
         },
         "team2": {
             "name": team2,
             "year": year2,
             "source": source2,
-            "n_matches": data2.get("n_matches", 0)
+            "n_matches": n2,
+            "total_matches": total2 or n2
         },
         "similarity": result["similarity"],
         "confidence": result["confidence"],
@@ -660,6 +678,30 @@ def compare_cross_teams(
         "n_features": result["total_features_used"],
         "feature_comparison": result["feature_comparison"]
     }
+
+
+def get_total_matches_for_team_year(team: str, year: int) -> int | None:
+    """
+    Obtém o total de jogos disputados por um time em uma Copa.
+    Busca no supplement.json (dados históricos completos).
+    """
+    try:
+        from ingest_supplement import load_supplement_data
+        supplement = load_supplement_data()
+        if not supplement:
+            return None
+
+        teams_data = supplement.get("teams", {})
+        team_data = teams_data.get(team, {})
+        copas = team_data.get("copas", [])
+
+        for copa in copas:
+            if int(copa.get("season", 0)) == year or int(copa.get("ano", 0)) == year:
+                return copa.get("jogos", None)
+
+        return None
+    except Exception:
+        return None
 
 
 def get_available_teams_years() -> list[dict]:
@@ -672,10 +714,15 @@ def get_available_teams_years() -> list[dict]:
     try:
         df = load_team_tournament_features()
         for _, row in df.iterrows():
+            year = int(str(row["season"])[:4])
+            n_matches = int(row.get("n_matches", 0))
+            total_matches = get_total_matches_for_team_year(row["team"], year)
             teams_years.append({
                 "team": row["team"],
-                "year": int(str(row["season"])[:4]),
-                "source": "statsbomb"
+                "year": year,
+                "source": "statsbomb",
+                "n_matches": n_matches,
+                "total_matches": total_matches or n_matches
             })
     except FileNotFoundError:
         pass
@@ -688,10 +735,13 @@ def get_available_teams_years() -> list[dict]:
             for (team, year), _ in hist_df.groupby(["team", "year"]):
                 # Evitar duplicatas
                 if not any(t["team"] == team and t["year"] == int(year) for t in teams_years):
+                    total_matches = get_total_matches_for_team_year(team, int(year))
                     teams_years.append({
                         "team": team,
                         "year": int(year),  # Converter para int nativo
-                        "source": "static_historical"
+                        "source": "static_historical",
+                        "n_matches": 0,  # Sem dados StatsBomb
+                        "total_matches": total_matches or 0
                     })
     except Exception:
         pass

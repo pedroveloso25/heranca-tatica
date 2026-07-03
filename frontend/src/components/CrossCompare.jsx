@@ -181,6 +181,11 @@ function CrossCompare() {
                 />
                 <div className="text-white font-semibold text-sm sm:text-base truncate">{result.team1.name}</div>
                 <div className="text-slate-400 text-xs sm:text-sm">{result.team1.year}</div>
+                {result.team1.source === 'statsbomb' && result.team1.n_matches < result.team1.total_matches && (
+                  <div className="text-amber-400 text-[10px] sm:text-xs mt-0.5">
+                    {result.team1.n_matches}/{result.team1.total_matches} jogos
+                  </div>
+                )}
               </div>
 
               {/* Similaridade */}
@@ -200,6 +205,11 @@ function CrossCompare() {
                 />
                 <div className="text-white font-semibold text-sm sm:text-base truncate">{result.team2.name}</div>
                 <div className="text-slate-400 text-xs sm:text-sm">{result.team2.year}</div>
+                {result.team2.source === 'statsbomb' && result.team2.n_matches < result.team2.total_matches && (
+                  <div className="text-amber-400 text-[10px] sm:text-xs mt-0.5">
+                    {result.team2.n_matches}/{result.team2.total_matches} jogos
+                  </div>
+                )}
               </div>
             </div>
 

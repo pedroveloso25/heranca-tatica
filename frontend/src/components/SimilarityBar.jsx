@@ -9,7 +9,8 @@ function SimilarityBar({
   featuresMissing = [],
   totalFeaturesUsed,
   source,
-  nMatches
+  nMatches,
+  totalMatches
 }) {
   const [showTooltip, setShowTooltip] = useState(false)
 
@@ -114,16 +115,30 @@ function SimilarityBar({
         {/* Linha 1: Ano e badges */}
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-white font-semibold text-base sm:text-lg">Copa {displayYear}</span>
-          <span className="text-slate-500 text-xs sm:text-sm bg-slate-700/50 px-2 py-0.5 rounded-full">
-            {nMatches} jogos
-          </span>
+          {/* Mostrar jogos com dados táticos vs total */}
+          {source === 'statsbomb' && totalMatches && nMatches < totalMatches ? (
+            <span className="text-xs sm:text-sm bg-slate-700/50 px-2 py-0.5 rounded-full">
+              <span className="text-emerald-400">{nMatches}</span>
+              <span className="text-slate-500">/{totalMatches} jogos</span>
+            </span>
+          ) : (
+            <span className="text-slate-500 text-xs sm:text-sm bg-slate-700/50 px-2 py-0.5 rounded-full">
+              {totalMatches || nMatches} jogos
+            </span>
+          )}
           {source && (
             <span className={`text-xs px-2 py-0.5 rounded-full ${
               source === 'statsbomb'
-                ? 'bg-emerald-500/10 text-emerald-400'
+                ? nMatches < (totalMatches || nMatches)
+                  ? 'bg-amber-500/10 text-amber-400'
+                  : 'bg-emerald-500/10 text-emerald-400'
                 : 'bg-slate-600/50 text-slate-400'
             }`}>
-              {source === 'statsbomb' ? 'Completo' : 'Hist.'}
+              {source === 'statsbomb'
+                ? nMatches < (totalMatches || nMatches)
+                  ? 'Parcial'
+                  : 'Completo'
+                : 'Hist.'}
             </span>
           )}
           {styles.badge}
