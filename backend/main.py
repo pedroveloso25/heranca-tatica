@@ -33,18 +33,11 @@ app = FastAPI(
 )
 
 # Configurar CORS para o frontend (local e producao)
+# Nota: allow_origins=["*"] permite qualquer origem - ideal para API publica
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://copa-heranca-tatica.vercel.app",
-        "https://*.vercel.app",
-        "https://copa-heranca-tatica-git-main-pedroveloso25s-projects.vercel.app/",
-        "https://copa-heranca-tatica.vercel.app/",
-        "https://copa-heranca-tatica-5r5emq98r-pedroveloso25s-projects.vercel.app/"
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],  # Permite todas as origens (API publica)
+    allow_credentials=False,  # Deve ser False quando allow_origins=["*"]
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -135,6 +128,12 @@ def root() -> dict[str, str]:
         "version": "1.0.0",
         "description": "Análise do DNA tático histórico das seleções da Copa do Mundo",
     }
+
+
+@app.get("/health")
+def health_check() -> dict[str, str]:
+    """Health check endpoint para verificar se a API está funcionando."""
+    return {"status": "ok"}
 
 
 @app.get("/api/teams")
