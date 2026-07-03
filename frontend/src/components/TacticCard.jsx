@@ -112,7 +112,7 @@ function TacticCard({ title, features, featureNames }) {
           const info = FEATURE_LABELS[name] || {
             name: name,
             description: '',
-            format: (v) => v.toFixed(2),
+            format: (v) => v?.toFixed(2) ?? '-',
             icon: (
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -122,6 +122,19 @@ function TacticCard({ title, features, featureNames }) {
             bg: 'bg-slate-500/10',
           }
           const value = features[name]
+
+          // Pular features que não existem para este time
+          if (value === undefined || value === null) return null
+
+          // Função de formatação segura
+          const safeFormat = (v) => {
+            if (v === undefined || v === null) return '-'
+            try {
+              return info.format(v)
+            } catch {
+              return v.toString()
+            }
+          }
 
           return (
             <div
@@ -135,7 +148,7 @@ function TacticCard({ title, features, featureNames }) {
                 </span>
               </div>
               <div className={`text-xl sm:text-3xl font-bold ${info.color}`}>
-                {info.format(value)}
+                {safeFormat(value)}
               </div>
               <div className="text-[10px] sm:text-xs text-slate-500 mt-1 sm:mt-2 leading-relaxed line-clamp-2">
                 {info.description}
