@@ -101,20 +101,20 @@ function TacticCard({ title, features, featureNames }) {
   if (!features) return null
 
   return (
-    <div className="bg-slate-800/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 card-hover">
-      <h3 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
-        <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
+    <div className="bg-slate-800/70 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-slate-700/50 card-hover">
+      <h3 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-5 flex items-center gap-2">
+        <span className="w-1 h-5 sm:h-6 bg-emerald-500 rounded-full"></span>
         {title}
       </h3>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
         {featureNames.map((name) => {
           const info = FEATURE_LABELS[name] || {
             name: name,
             description: '',
             format: (v) => v.toFixed(2),
             icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             ),
@@ -126,18 +126,18 @@ function TacticCard({ title, features, featureNames }) {
           return (
             <div
               key={name}
-              className={`${info.bg} rounded-xl p-4 transition-all duration-200 hover:scale-105 border border-transparent hover:border-slate-600/30`}
+              className={`${info.bg} rounded-lg sm:rounded-xl p-2.5 sm:p-4 transition-all duration-200 active:scale-95 sm:hover:scale-105 border border-transparent hover:border-slate-600/30`}
             >
-              <div className="flex items-center gap-2 mb-2">
-                <span className={info.color}>{info.icon}</span>
-                <span className="text-slate-400 text-xs uppercase tracking-wide font-medium">
+              <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
+                <span className={`${info.color} [&>svg]:w-4 [&>svg]:h-4 sm:[&>svg]:w-5 sm:[&>svg]:h-5`}>{info.icon}</span>
+                <span className="text-slate-400 text-[10px] sm:text-xs uppercase tracking-wide font-medium truncate">
                   {info.name}
                 </span>
               </div>
-              <div className={`text-3xl font-bold ${info.color}`}>
+              <div className={`text-xl sm:text-3xl font-bold ${info.color}`}>
                 {info.format(value)}
               </div>
-              <div className="text-xs text-slate-500 mt-2 leading-relaxed">
+              <div className="text-[10px] sm:text-xs text-slate-500 mt-1 sm:mt-2 leading-relaxed line-clamp-2">
                 {info.description}
               </div>
             </div>

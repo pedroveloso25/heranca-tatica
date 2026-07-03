@@ -79,68 +79,72 @@ function CrossCompare() {
           Comparar Seleções
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-4">
           {/* Time 1 */}
-          <div className="space-y-3">
+          <div className="space-y-2">
             <label className="block text-sm font-medium text-slate-400">Seleção 1</label>
-            <select
-              value={team1}
-              onChange={(e) => { setTeam1(e.target.value); setYear1('') }}
-              className="w-full bg-slate-700/80 text-white px-4 py-3 rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none"
-            >
-              <option value="">Selecione...</option>
-              {teamsData?.teams.map(team => (
-                <option key={team.name} value={team.name}>{team.name}</option>
-              ))}
-            </select>
+            <div className="grid grid-cols-2 gap-2">
+              <select
+                value={team1}
+                onChange={(e) => { setTeam1(e.target.value); setYear1('') }}
+                className="w-full bg-slate-700/80 text-white px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none text-sm sm:text-base"
+              >
+                <option value="">Selecione...</option>
+                {teamsData?.teams.map(team => (
+                  <option key={team.name} value={team.name}>{team.name}</option>
+                ))}
+              </select>
 
-            <select
-              value={year1}
-              onChange={(e) => setYear1(e.target.value)}
-              disabled={!team1}
-              className="w-full bg-slate-700/80 text-white px-4 py-3 rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none disabled:opacity-50"
-            >
-              <option value="">Ano da Copa...</option>
-              {getYearsForTeam(team1).map(y => (
-                <option key={y.year} value={y.year}>
-                  {y.year} ({y.source === 'statsbomb' ? 'Completo' : 'Histórico'})
-                </option>
-              ))}
-            </select>
+              <select
+                value={year1}
+                onChange={(e) => setYear1(e.target.value)}
+                disabled={!team1}
+                className="w-full bg-slate-700/80 text-white px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none disabled:opacity-50 text-sm sm:text-base"
+              >
+                <option value="">Ano...</option>
+                {getYearsForTeam(team1).map(y => (
+                  <option key={y.year} value={y.year}>
+                    {y.year}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
           {/* VS */}
-          <div className="hidden md:flex items-center justify-center">
-            <div className="text-3xl font-bold text-slate-600">VS</div>
+          <div className="flex items-center justify-center py-1">
+            <div className="text-xl sm:text-2xl font-bold text-slate-600">VS</div>
           </div>
 
           {/* Time 2 */}
-          <div className="space-y-3 md:col-start-2 md:row-start-1">
+          <div className="space-y-2">
             <label className="block text-sm font-medium text-slate-400">Seleção 2</label>
-            <select
-              value={team2}
-              onChange={(e) => { setTeam2(e.target.value); setYear2('') }}
-              className="w-full bg-slate-700/80 text-white px-4 py-3 rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none"
-            >
-              <option value="">Selecione...</option>
-              {teamsData?.teams.map(team => (
-                <option key={team.name} value={team.name}>{team.name}</option>
-              ))}
-            </select>
+            <div className="grid grid-cols-2 gap-2">
+              <select
+                value={team2}
+                onChange={(e) => { setTeam2(e.target.value); setYear2('') }}
+                className="w-full bg-slate-700/80 text-white px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none text-sm sm:text-base"
+              >
+                <option value="">Selecione...</option>
+                {teamsData?.teams.map(team => (
+                  <option key={team.name} value={team.name}>{team.name}</option>
+                ))}
+              </select>
 
-            <select
-              value={year2}
-              onChange={(e) => setYear2(e.target.value)}
-              disabled={!team2}
-              className="w-full bg-slate-700/80 text-white px-4 py-3 rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none disabled:opacity-50"
-            >
-              <option value="">Ano da Copa...</option>
-              {getYearsForTeam(team2).map(y => (
-                <option key={y.year} value={y.year}>
-                  {y.year} ({y.source === 'statsbomb' ? 'Completo' : 'Histórico'})
-                </option>
-              ))}
-            </select>
+              <select
+                value={year2}
+                onChange={(e) => setYear2(e.target.value)}
+                disabled={!team2}
+                className="w-full bg-slate-700/80 text-white px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border border-slate-600/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none disabled:opacity-50 text-sm sm:text-base"
+              >
+                <option value="">Ano...</option>
+                {getYearsForTeam(team2).map(y => (
+                  <option key={y.year} value={y.year}>
+                    {y.year}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
 
@@ -164,48 +168,48 @@ function CrossCompare() {
 
       {/* Resultado */}
       {result && (
-        <div className="bg-slate-800/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
+        <div className="bg-slate-800/70 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-slate-700/50">
           {/* Score Principal */}
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-8 mb-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 mb-4">
               {/* Time 1 */}
-              <div className="text-center">
+              <div className="text-center flex-1 max-w-[100px] sm:max-w-none">
                 <img
                   src={result.team1.flag_url}
                   alt={result.team1.name}
-                  className="w-16 h-12 object-cover rounded-lg shadow-lg mx-auto mb-2"
+                  className="w-12 h-9 sm:w-16 sm:h-12 object-cover rounded-lg shadow-lg mx-auto mb-1.5 sm:mb-2"
                 />
-                <div className="text-white font-semibold">{result.team1.name}</div>
-                <div className="text-slate-400 text-sm">{result.team1.year}</div>
+                <div className="text-white font-semibold text-sm sm:text-base truncate">{result.team1.name}</div>
+                <div className="text-slate-400 text-xs sm:text-sm">{result.team1.year}</div>
               </div>
 
               {/* Similaridade */}
-              <div>
-                <div className={`text-5xl font-bold ${getSimilarityColor(result.similarity)}`}>
+              <div className="flex-shrink-0">
+                <div className={`text-3xl sm:text-5xl font-bold ${getSimilarityColor(result.similarity)}`}>
                   {(result.similarity * 100).toFixed(0)}%
                 </div>
-                <div className="text-slate-500 text-sm mt-1">similaridade</div>
+                <div className="text-slate-500 text-xs sm:text-sm mt-1">similaridade</div>
               </div>
 
               {/* Time 2 */}
-              <div className="text-center">
+              <div className="text-center flex-1 max-w-[100px] sm:max-w-none">
                 <img
                   src={result.team2.flag_url}
                   alt={result.team2.name}
-                  className="w-16 h-12 object-cover rounded-lg shadow-lg mx-auto mb-2"
+                  className="w-12 h-9 sm:w-16 sm:h-12 object-cover rounded-lg shadow-lg mx-auto mb-1.5 sm:mb-2"
                 />
-                <div className="text-white font-semibold">{result.team2.name}</div>
-                <div className="text-slate-400 text-sm">{result.team2.year}</div>
+                <div className="text-white font-semibold text-sm sm:text-base truncate">{result.team2.name}</div>
+                <div className="text-slate-400 text-xs sm:text-sm">{result.team2.year}</div>
               </div>
             </div>
 
             {/* Badge de confiança */}
-            <div className="flex justify-center gap-2">
-              <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getConfidenceColor(result.confidence)}`}>
+            <div className="flex justify-center gap-2 flex-wrap">
+              <span className={`px-2.5 sm:px-3 py-1 rounded-full text-xs font-medium border ${getConfidenceColor(result.confidence)}`}>
                 {getConfidenceLabel(result.confidence)}
               </span>
-              <span className="px-3 py-1 rounded-full text-xs font-medium border border-slate-600 text-slate-400">
-                {result.n_features} features comparadas
+              <span className="px-2.5 sm:px-3 py-1 rounded-full text-xs font-medium border border-slate-600 text-slate-400">
+                {result.n_features} features
               </span>
             </div>
           </div>
@@ -229,7 +233,7 @@ function CrossCompare() {
 
           {/* Tabela de comparação */}
           <div className="space-y-3">
-            <h4 className="text-sm font-medium text-slate-400 uppercase tracking-wide">
+            <h4 className="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wide">
               Comparação Feature a Feature
             </h4>
             <div className="space-y-2">
@@ -241,31 +245,63 @@ function CrossCompare() {
                 return (
                   <div
                     key={feature.name}
-                    className="flex items-center gap-4 p-3 bg-slate-700/30 rounded-xl"
+                    className="p-2.5 sm:p-3 bg-slate-700/30 rounded-lg sm:rounded-xl"
                   >
-                    <div className="w-32 text-sm text-slate-400">{feature.display_name}</div>
-                    <div className="flex-1 flex items-center gap-4">
-                      <div className="w-20 text-right text-white font-medium">
-                        {feature.team1_value.toFixed(1)}{feature.unit}
+                    {/* Mobile: layout empilhado */}
+                    <div className="sm:hidden">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-xs text-slate-400 font-medium">{feature.display_name}</span>
+                        <span className={`text-xs ${diffPct > 20 ? 'text-amber-400' : 'text-slate-500'}`}>
+                          {diffPct > 0 ? `${diffPct.toFixed(0)}% diff` : '-'}
+                        </span>
                       </div>
-                      <div className="flex-1 h-2 bg-slate-600/50 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full"
-                          style={{ width: `${Math.min(100, (feature.team1_value / maxVal) * 100)}%` }}
-                        />
-                      </div>
-                      <div className="flex-1 h-2 bg-slate-600/50 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-amber-500 to-amber-400 rounded-full"
-                          style={{ width: `${Math.min(100, (feature.team2_value / maxVal) * 100)}%` }}
-                        />
-                      </div>
-                      <div className="w-20 text-white font-medium">
-                        {feature.team2_value.toFixed(1)}{feature.unit}
+                      <div className="flex items-center gap-2">
+                        <div className="flex-1">
+                          <div className="text-xs text-purple-400 mb-1">{feature.team1_value.toFixed(1)}{feature.unit}</div>
+                          <div className="h-1.5 bg-slate-600/50 rounded-full overflow-hidden">
+                            <div
+                              className="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full"
+                              style={{ width: `${Math.min(100, (feature.team1_value / maxVal) * 100)}%` }}
+                            />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-xs text-amber-400 mb-1 text-right">{feature.team2_value.toFixed(1)}{feature.unit}</div>
+                          <div className="h-1.5 bg-slate-600/50 rounded-full overflow-hidden">
+                            <div
+                              className="h-full bg-gradient-to-r from-amber-500 to-amber-400 rounded-full"
+                              style={{ width: `${Math.min(100, (feature.team2_value / maxVal) * 100)}%` }}
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className={`w-16 text-right text-xs ${diffPct > 20 ? 'text-amber-400' : 'text-slate-500'}`}>
-                      {diffPct > 0 ? `${diffPct.toFixed(0)}% diff` : '-'}
+                    {/* Desktop: layout horizontal */}
+                    <div className="hidden sm:flex items-center gap-4">
+                      <div className="w-32 text-sm text-slate-400">{feature.display_name}</div>
+                      <div className="flex-1 flex items-center gap-4">
+                        <div className="w-20 text-right text-white font-medium">
+                          {feature.team1_value.toFixed(1)}{feature.unit}
+                        </div>
+                        <div className="flex-1 h-2 bg-slate-600/50 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full"
+                            style={{ width: `${Math.min(100, (feature.team1_value / maxVal) * 100)}%` }}
+                          />
+                        </div>
+                        <div className="flex-1 h-2 bg-slate-600/50 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-gradient-to-r from-amber-500 to-amber-400 rounded-full"
+                            style={{ width: `${Math.min(100, (feature.team2_value / maxVal) * 100)}%` }}
+                          />
+                        </div>
+                        <div className="w-20 text-white font-medium">
+                          {feature.team2_value.toFixed(1)}{feature.unit}
+                        </div>
+                      </div>
+                      <div className={`w-16 text-right text-xs ${diffPct > 20 ? 'text-amber-400' : 'text-slate-500'}`}>
+                        {diffPct > 0 ? `${diffPct.toFixed(0)}% diff` : '-'}
+                      </div>
                     </div>
                   </div>
                 )

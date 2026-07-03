@@ -104,14 +104,17 @@ function SimilarityBar({
 
   return (
     <div
-      className="group py-2 relative"
+      className="group py-3 relative"
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
+      onClick={() => setShowTooltip(!showTooltip)}
     >
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-3">
-          <span className="text-white font-semibold text-lg">Copa {displayYear}</span>
-          <span className="text-slate-500 text-sm bg-slate-700/50 px-2 py-0.5 rounded-full">
+      {/* Layout mobile: empilhado / Desktop: lado a lado */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+        {/* Linha 1: Ano e badges */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-white font-semibold text-base sm:text-lg">Copa {displayYear}</span>
+          <span className="text-slate-500 text-xs sm:text-sm bg-slate-700/50 px-2 py-0.5 rounded-full">
             {nMatches} jogos
           </span>
           {source && (
@@ -120,16 +123,17 @@ function SimilarityBar({
                 ? 'bg-emerald-500/10 text-emerald-400'
                 : 'bg-slate-600/50 text-slate-400'
             }`}>
-              {source === 'statsbomb' ? 'Completo' : 'Historico'}
+              {source === 'statsbomb' ? 'Completo' : 'Hist.'}
             </span>
           )}
           {styles.badge}
         </div>
-        <div className="flex items-center gap-3">
-          <span className={`text-sm font-medium ${getLabelColor(similarity)}`}>
+        {/* Linha 2 mobile / Direita desktop: similaridade */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className={`text-xs sm:text-sm font-medium ${getLabelColor(similarity)}`}>
             {getLabel(similarity)}
           </span>
-          <span className="text-white font-bold text-lg tabular-nums">
+          <span className="text-white font-bold text-base sm:text-lg tabular-nums">
             {percentage.toFixed(0)}%
           </span>
         </div>
@@ -166,20 +170,24 @@ function SimilarityBar({
         </div>
       )}
 
-      {/* Tooltip com features */}
+      {/* Tooltip com features - toque no mobile */}
       {showTooltip && (featuresUsed.length > 0 || featuresMissing.length > 0) && (
-        <div className="absolute left-0 right-0 top-full mt-2 z-50 bg-slate-800 border border-slate-600 rounded-xl p-4 shadow-xl">
-          <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-xs">
+        <div className="absolute left-0 right-0 top-full mt-2 z-50 bg-slate-800 border border-slate-600 rounded-xl p-3 sm:p-4 shadow-xl">
+          <div className="flex justify-between items-center mb-2 sm:hidden">
+            <span className="text-xs text-slate-400">Features usadas</span>
+            <button onClick={() => setShowTooltip(false)} className="text-slate-500 text-xs">✕</button>
+          </div>
+          <div className="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-1 text-xs">
             {featuresUsed.map(f => (
-              <div key={f} className="flex items-center gap-2 text-emerald-400">
+              <div key={f} className="flex items-center gap-1.5 sm:gap-2 text-emerald-400">
                 <span className="text-emerald-500">✓</span>
-                {featureNames[f] || f}
+                <span className="truncate">{featureNames[f] || f}</span>
               </div>
             ))}
             {featuresMissing.map(f => (
-              <div key={f} className="flex items-center gap-2 text-slate-500">
+              <div key={f} className="flex items-center gap-1.5 sm:gap-2 text-slate-500">
                 <span>—</span>
-                {featureNames[f] || f}
+                <span className="truncate">{featureNames[f] || f}</span>
               </div>
             ))}
           </div>
