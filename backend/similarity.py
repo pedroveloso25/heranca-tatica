@@ -309,6 +309,15 @@ def compare_all_team_editions(team: str, reference_year: int | None = None) -> d
     ref_total_matches = get_total_matches_for_team_year(team, reference_year)
     ref_n_matches = ref_data.get("n_matches", 0)
 
+    # Converter features para float nativo (evitar np.float64 que não serializa em JSON)
+    def to_native(val):
+        if val is None:
+            return None
+        try:
+            return float(val)
+        except (TypeError, ValueError):
+            return val
+
     return {
         "team": team,
         "reference": {
@@ -316,8 +325,8 @@ def compare_all_team_editions(team: str, reference_year: int | None = None) -> d
             "source": ref_data.get("source", "unknown"),
             "n_matches": ref_n_matches,
             "total_matches": ref_total_matches or ref_n_matches,
-            # Incluir todas as features disponíveis
-            "features": {f: ref_data.get(f) for f in ALL_FEATURES if ref_data.get(f) is not None}
+            # Incluir todas as features disponíveis (convertidas para float nativo)
+            "features": {f: to_native(ref_data.get(f)) for f in ALL_FEATURES if ref_data.get(f) is not None}
         },
         "comparisons": comparisons,
     }

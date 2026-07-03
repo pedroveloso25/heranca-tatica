@@ -327,16 +327,22 @@ def get_team_features_historical(team: str, year: int) -> dict | None:
     if team_data.empty:
         return None
 
+    # Helper para converter np.float64 para float nativo
+    def to_float(val):
+        if val is None or pd.isna(val):
+            return None
+        return float(val)
+
     # Agregar jogos do time naquela Copa
     features = {
         'team': team,
-        'year': year,
+        'year': int(year),
         'source': 'static_historical',
-        'n_matches': len(team_data),
-        'posse': team_data['posse'].mean() if 'posse' in team_data else None,
-        'chutes_gol': team_data['chutes_gol'].mean() if 'chutes_gol' in team_data else None,
-        'precisao_passes': team_data['precisao_passes'].mean() if 'precisao_passes' in team_data else None,
-        'xg': team_data['xg'].mean() if 'xg' in team_data and team_data['xg'].notna().any() else None,
+        'n_matches': int(len(team_data)),
+        'posse': to_float(team_data['posse'].mean()) if 'posse' in team_data else None,
+        'chutes_gol': to_float(team_data['chutes_gol'].mean()) if 'chutes_gol' in team_data else None,
+        'precisao_passes': to_float(team_data['precisao_passes'].mean()) if 'precisao_passes' in team_data else None,
+        'xg': to_float(team_data['xg'].mean()) if 'xg' in team_data and team_data['xg'].notna().any() else None,
         'confidence': team_data['confidence'].iloc[0] if 'confidence' in team_data else 'medium'
     }
 
