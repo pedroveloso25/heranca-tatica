@@ -1,107 +1,107 @@
-# Herança Tática
+# Herança Tática ⚽
 
-**O Brasil de 2022 joga mais parecido com o de 1970 ou com o de 2018?**
+> *The statistical version of that argument that never ends between generations.*
 
-Este projeto responde a essa pergunta transformando cada Copa do Mundo em um "DNA tático" — um vetor numérico que captura *como* um time joga, não *quanto* ele ganha.
+I grew up as a sports fanatic, and the World Cup is the peak of it all for me. Taking advantage of the moment (and my hyperfocus that comes around every 4 years), I decided to mix the two things I love most: football and technology.
 
-## A Ideia
+The result? **Herança Tática (Tactical Heritage)** — a web app that analyzes the tactical DNA of World Cup national teams from 1930 to 2022, displays each team's full historical record, and compares playing styles across different teams and eras.
 
-Resultados mentem. Um 1x0 sofrido pode esconder uma atuação dominante. Um 4x0 pode vir de contra-ataques sem posse.
+*"Brazil today is way better than the 2006 squad."*
+*"No way, you didn't see that team..."*
 
-Herança Tática ignora placares e olha para o estilo: pressão alta ou bloco baixo? Passes curtos ou longos? Jogo pelas pontas ou pelo meio? Transições rápidas ou posse paciente?
+Now we have data.
 
-Com isso, conseguimos comparar seleções através das décadas e descobrir quais edições de um mesmo país jogavam de forma similar — e quais eram completamente diferentes.
+🌐 **[copa-heranca-tatica.vercel.app](https://copa-heranca-tatica.vercel.app/)**
 
-## O Que Você Pode Fazer
+---
 
-**Comparar Edições de Uma Seleção**
-- Selecione Brasil e veja como cada Copa (de 1958 a 2022) se compara com a mais recente.
-- Descubra que o Brasil de 1970 (86% similar) joga mais parecido com 2022 do que o Brasil de 2018 (82%).
+## What it does
 
-**Comparar Duas Seleções Quaisquer**
-- Holanda 1974 vs Espanha 2010: 76% similar (tiki-taka antes do tiki-taka?)
-- Argentina 1986 vs Argentina 2022: quão diferente era o time de Maradona?
+- 📊 Compares tactical styles of the same national team across decades
+- 🌍 Cross-compares any team vs any other team from any World Cup (1930–2022)
+- 📈 Returns a similarity percentage with an explicit confidence level
+- 🏆 Shows each team's full World Cup history: titles, games, goals, stages reached
 
-**Ver Histórico Completo**
-- Todas as Copas de uma seleção com estatísticas, títulos e nível de dados disponíveis.
+---
 
-## Níveis de Confiança
+## How it works
 
-Nem todos os dados são iguais:
+It wasn't all smooth — historical data is fragmented, and each era has a very different level of detail. But I found a way to mix them honestly: similarity is calculated using **only the features present in both sources**, and the confidence level tells you exactly how many metrics went into each comparison.
 
-| Nível | Features | Fonte | Copas |
-|-------|----------|-------|-------|
-| Alto | 12 features táticas | StatsBomb | 1958, 1962, 1970, 1974, 1986, 1990, 2018, 2022 |
-| Médio | 4 features básicas | Dados históricos | 1966, 1978, 1982, 1994, 1998, 2002, 2006, 2010, 2014 |
+Up to 12 tactical metrics when the data allows:
 
-Comparações entre Copas com dados diferentes usam apenas as features em comum. A interface mostra claramente o nível de confiança de cada comparação.
+| Metric | Description |
+|---|---|
+| Defensive line height | Average position of defenders (0–120) |
+| PPDA | Passes allowed per defensive action — pressing intensity |
+| Short passes % | Passes under 15m |
+| Long passes % | Passes over 30m |
+| Attack width | Average distance between widest attackers |
+| Transition speed | Time from ball recovery to first forward pass |
+| Cross vs central play | Crossing frequency vs central combinations |
+| Counterpress rate | Pressure actions within 5s of losing the ball |
+| Possession | Ball possession percentage |
+| Shots on target | Shots on goal per game |
+| Pass accuracy | Pass completion rate |
+| xG | Expected goals |
 
-## Features Táticas
+**Confidence levels:**
 
-**Extraídas do StatsBomb (12 features):**
-- Altura da Linha Defensiva
-- PPDA (Pressão)
-- % Passes Curtos / Longos
-- Largura de Ataque
-- Velocidade de Transição
-- Cruzamentos vs Central
-- Taxa de Reação à Perda (Counterpressing)
-- Posse de Bola
-- Chutes a Gol
-- Precisão de Passes
-- xG (Expected Goals)
+🟢 **High** — 6+ features in common (both StatsBomb)
+🟡 **Medium** — 3–5 features (mixed sources)
+🔴 **Low** — 1–2 features (basic historical data only)
 
-## Stack Técnica
+---
 
-```text
-Backend:  Python 3.11 + FastAPI
-Frontend: React 18 + Vite + Tailwind CSS
-Dados:    StatsBomb Open Data + Dados históricos compilados
-Cálculo:  Similaridade baseada em diferença percentual normalizada
-```
+## Stack
 
-## Como Rodar
+- **Frontend:** React 18 + Vite + Tailwind CSS — deployed on Vercel
+- **Backend:** Python 3.11 + FastAPI — deployed on Render
+- **Tactical data:** [StatsBomb Open Data](https://github.com/statsbomb/open-data) (1970, 2018, 2022)
+- **Historical data:** Compiled from public sources (1930–2014)
+
+---
+
+## Running locally
 
 ```bash
 # Backend
 cd backend
 pip install -r requirements.txt
-python ingest.py      # Baixa dados StatsBomb
-python features.py    # Extrai features táticas
-python main.py        # Roda API na porta 8080
+python main.py
 
-# Frontend
+# Frontend (separate terminal)
 cd frontend
 npm install
-npm run dev           # Roda em localhost:5173
+npm run dev
 ```
 
-## API
-
-```text
-GET /api/teams              Lista seleções disponíveis
-GET /api/compare?team=X     Compara todas as edições de uma seleção
-GET /api/compare-cross      Compara duas seleções/anos quaisquer
-GET /api/teams-years        Lista todos os times/anos disponíveis
-GET /api/history?team=X     Histórico completo de uma seleção
-```
-
-## Alguns Resultados Interessantes
-
-**Brasil 2022 vs edições anteriores:**
-
-| Copa | Similaridade | Confiança |
-|------|--------------|-----------|
-| 1970 | 86% | Alta |
-| 1982 | 85% | Média |
-| 2018 | 82% | Alta |
-| 1962 | 75% | Alta |
-
-**Times mais parecidos com Brasil 2022:**
-1. Argentina 2022 (88%)
-2. França 2022 (84%)
-3. Brasil 1970 (86%)
+Open at `http://localhost:5173`
 
 ---
 
-*Dados táticos: StatsBomb Open Data. Dados históricos: FIFA/registros oficiais.*
+## Project structure
+
+```
+heranca-tatica/
+├── backend/
+│   ├── main.py              # FastAPI app
+│   ├── features.py          # Tactical feature extraction
+│   ├── similarity.py        # Partial vector similarity engine
+│   ├── ingest.py            # StatsBomb data pipeline
+│   ├── ingest_supplement.py # Historical data supplement
+│   └── data/                # Parquet files + historical JSON
+├── frontend/
+│   └── src/
+│       ├── App.jsx
+│       └── components/
+│           ├── TeamSelector.jsx
+│           ├── SimilarityBar.jsx
+│           ├── TacticCard.jsx
+│           └── HistoryCard.jsx
+└── README.md
+```
+
+---
+
+Built it because I wanted to. Learned what I needed along the way. Had a lot of fun doing it.
